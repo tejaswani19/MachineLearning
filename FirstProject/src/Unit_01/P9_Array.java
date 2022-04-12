@@ -73,33 +73,29 @@ class QuestionsOnArray {
 
 	void findSecondLargestAndSecondSmallestElement(int[] arr) {
 		// write code here!
-		int max=arr[0],max2=arr[1],min=arr[0],min2=arr[1];
-		
-		for(int i=1;i<arr.length;i++)
-		{
-			if(max<arr[i])
-				{
-					max2=max;
-					max=arr[i];
-				}
-			if(max2<arr[i] && arr[i]<max)
-				max2=arr[i];	
-		}	
-		System.out.println("Second Largest Element: "+max2);
-		
-		for(int i=0;i<arr.length;i++) 
-		{
-			if(min>arr[i])
-			{
-				min2=min;
-				min=arr[i];
+		int max = arr[0], max2 = arr[1], min = arr[0], min2 = arr[1];
+
+		for (int i = 1; i < arr.length; i++) {
+			if (max < arr[i]) {
+				max2 = max;
+				max = arr[i];
 			}
-			if(min2>arr[i] && arr[i]>min)
-				min2=arr[i];
+			if (max2 < arr[i] && arr[i] < max)
+				max2 = arr[i];
 		}
-		System.out.println("Second Smallest Element: "+min2);
-		
-}
+		System.out.println("Second Largest Element: " + max2);
+
+		for (int i = 0; i < arr.length; i++) {
+			if (min > arr[i]) {
+				min2 = min;
+				min = arr[i];
+			}
+			if (min2 > arr[i] && arr[i] > min)
+				min2 = arr[i];
+		}
+		System.out.println("Second Smallest Element: " + min2);
+
+	}
 
 	void leftRotationInAnArray(int[] arr) {
 		// write code here!
